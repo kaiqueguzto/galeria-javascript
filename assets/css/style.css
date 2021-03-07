@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+
+
+body {
+  background: #212121;
+  position: relative;
+}
+
+header {
+  background: #333333;
+  padding: 20px;
+}
+
+header div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 37px;
+  color: #FFF;
+}
+
+header div button {
+  border: none;
+  background: #494949;
+  color: #FFF;
+  padding: 10px;
+
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+.container {
+  margin-top: 20px;
+}
+
+.main-image {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-image li {
+  margin: 5px 10px;
+  position: relative;
+}
+
+.main-image li span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.main-image li:hover span {
+  opacity: 1;
+}
+
+.main-image li div {}
+
+.image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+.modal-photo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-photo {
+  position: relative;
+  background: #212121;
+  width: 600px;
+  max-width: 600px;
+  padding: 15px;
+  height: 300px;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-photo h2 {
+  color: #FFF;
+}
+
+.add-photo form {
+  margin-top: 50px;
+  width: 80%;
+  text-align: center;
+}
+.add-photo form input {
+  padding: 6px;
+  font-size: 17px;
+  color: #333;
+
+  width: 100%;
+  outline: none;
+}
+
+.add-photo form button {
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 17px;
+
+  width: 160px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: all 200ms;
+}
+
+.add-photo form button:hover {
+  filter: brightness(90%);
+  color: #7159c1;
+}
+
+.add-photo .error strong {
+  color: #c72929;
+  font-size: 17px;
+  
+  position: relative;
+  top: 25px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.main-modal-image {
+  position: relative;
+  background: #212121;
+  width: 600px;
+  max-width: 600px;
+  padding: 15px;
+  height: 300px;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-image {
+  height: 300px;
+  margin-top: 4px;
+}
+
+.arrow {
+  font-size: 32px;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  font-size:  21px;
+  margin: 5px 10px;   
+
+  color: #FFF;
+  cursor: pointer;
+}
+
+
+
+@media (max-width:1170px) { 
+  .main-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media (max-width:620px) {
+  .main-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-image {
+    display: grid;
+    grid-template-columns: 1fr
+  }
+}
+
+
+@media (max-width: 700px ) {
+  .main-modal-image {
+    width: 90%;
+  }
+  .modal-image {
+    width: 400px;
+    margin-top: 4px;
+  }
+}
+
+@media(max-width: 520px) {
+  .main-modal-image {
+    width: 100%;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: 270px;
+  }
+}
+
+
+@media(max-width: 330px) {
+  header div button {
+    font-size: 12px;
+  }
+}

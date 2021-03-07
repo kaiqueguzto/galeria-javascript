@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Galeria</h1>
+
+      <button onclick="openModalAddPhoto()">Adicionar uma foto</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <ul class="main-image">
+    </ul>
+  </div>
+
+  <div class="modal-photo">
+    <div class="add-photo">
+
+      <strong class="close-modal" onclick="closeModalAddPhoto()">X</strong>
+      <h2>Adicionar uma foto</h2>
+      <form class="form">
+        <input type="text" class="input-add-image" placeholder="Link da foto">
+        <button>Adicionar</button>
+      </form>
+
+      <div class="error">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal">
+    <div class="main-modal-image">
+      
+      <strong class="close-modal" onclick="closeModal()" >X</strong>
+      <span class="prev-image arrow">❮</span>
+      <div class="modal-insert-image">
+
+      </div>
+
+      <span class="next-image arrow">❯</span>
+    </div>
+  </div>
+
+  <script src="/assets/js/index.js"></script>
+</body>
+</html>
