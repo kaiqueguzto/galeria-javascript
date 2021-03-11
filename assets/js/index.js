@@ -14,7 +14,6 @@ const prevImageDOM = document.querySelector('.prev-image');
 const getLocalStorage = localStorage.getItem('photos');
 let photos = getLocalStorage ? JSON.parse(localStorage.photos) : [];
 
-const randomId = Math.floor(Math.random() * 9999)
 
 const insertAllImageToDOM = photos => {
   photos.map(({ id, image }) => {
@@ -30,6 +29,8 @@ const insertAllImageToDOM = photos => {
 
 const addImage = e => {
   e.preventDefault();
+  const randomId = Math.floor(Math.random() * 9999)
+
   const inputImage = inputAddImage.value;
 
   const validate = validateAddImage(inputImage);
@@ -77,18 +78,19 @@ const insertImageToModal = ({id, image}) => {
 
 const nextImage = id => {
   const index = photos.findIndex(photo => photo.id == id);
-  if (index) return;
-
+  
   const photoNext = photos[index + 1];
+  if (!photoNext) return;
   insertImageToModal(photoNext);
 
 }
 
 const prevImage = id => {
   const index = photos.findIndex(photo => photo.id == id);
-  if (!index) return;
-  
+
   const photoNext = photos[index - 1];
+  if (!photoNext) return;
+
   insertImageToModal(photoNext);
 }
 
